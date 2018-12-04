@@ -3,22 +3,9 @@ kind: ClusterRole
 metadata:
   name: jenkins-cluster-role
 rules:
-- apiGroups:
-  - rbac.authorization.k8s.io
-  resources: 
-  - pods
-  - services
-  - deployments
-  - namespaces
-  verbs: 
-  - create
-  - delete
-  - get
-  - watch
-  - list
-- apiGroups:
-  - rbac.authorization.k8s.io
-  resources:
-  - pods/exec
-  verbs: [""]
-
+- apiGroups: [""]
+  resources: ["pods", "deployments", "services", "namespaces"]
+  verbs: ["create", "delete", "get", "watch", "list"]
+- apiGroups: [""]
+  resources: ["pods/exec"]
+  verbs: ["create"]

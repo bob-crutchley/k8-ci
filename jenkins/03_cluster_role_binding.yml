@@ -5,7 +5,7 @@ metadata:
 subjects:
 - kind: ServiceAccount
   name: jenkins-service-account
-  namespace: default  
+  namespace: default
 roleRef:
   kind: ClusterRole
   name: jenkins-cluster-role
