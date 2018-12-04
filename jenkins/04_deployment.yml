@@ -21,10 +21,10 @@ spec:
         - name: http-port
           containerPort: 8080
         volumeMounts:
-        - name: jenkins-jobs
-          mountPath: /var/jenkins_home/jobs
+        - name: jenkins-home
+          mountPath: /var/jenkins_home
       volumes:
-        - name: jenkins-jobs
+        - name: jenkins-home
           gcePersistentDisk:
-            pdName: jenkins-jobs
+            pdName: jenkins-test
             fsType: ext4
