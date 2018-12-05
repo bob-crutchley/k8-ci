@@ -3,9 +3,7 @@ kind: ClusterRole
 metadata:
   name: jenkins-cluster-role
 rules:
-- apiGroups: [""]
-  resources: ["pods", "deployments", "services", "namespaces"]
-  verbs: ["create", "delete", "get", "watch", "list"]
-- apiGroups: [""]
-  resources: ["pods/exec"]
-  verbs: ["create"]
+- apiGroups: ["*"]
+  resources: ["*"]
+  verbs: ["*"]
+
